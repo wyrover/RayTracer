@@ -132,6 +132,8 @@ Colour RayTracer::TraceScene(Scene* pScene, Ray& ray, Colour incolour, int trace
 {
 	RayHitResult result;
 	Colour outcolour = incolour;
+	Colour reflectColour;
+	Colour refractColour;
 
 	std::vector<Light*>* light_list = pScene->GetLightList();
 
@@ -167,9 +169,10 @@ Colour RayTracer::TraceScene(Scene* pScene, Ray& ray, Colour incolour, int trace
 				//Combine the returned colour with the current surface colour 
 
 				// DONE
-				ray.SetRay(result.point, ray.GetRay().Reflect(result.normal));
+				m_isReflecting = true;
 
-			 	outcolour *= TraceScene(pScene, ray, outcolour, --tracelevel, shadowray);
+				ray.SetRay(result.point, ray.GetRay().Reflect(result.normal));
+				outcolour *= TraceScene(pScene, ray, outcolour, --tracelevel, shadowray);
 			}
 		}
 
@@ -195,11 +198,10 @@ Colour RayTracer::TraceScene(Scene* pScene, Ray& ray, Colour incolour, int trace
 				{
 					refractionIndex = AIR_REFRACTIVE_INDEX / ((Primitive*)result.data)->GetMaterial()->GetRefractiveIndex();
 				}
-
 				m_isRefracting = true;
-				ray.SetRay(result.point + (result.normal * -0.0001), ray.GetRay().Refract((result.normal), 1));
 
-				outcolour += (TraceScene(pScene, ray, outcolour, --tracelevel, shadowray) * ((Primitive*)result.data)->GetMaterial()->GetTransparency());
+				ray.SetRay(result.point + (result.normal * -0.0001), ray.GetRay().Refract((result.normal), 1));
+				outcolour += TraceScene(pScene, ray, outcolour, --tracelevel, shadowray) * ((Primitive*)result.data)->GetMaterial()->GetTransparency();
 			}
 		}
 		
@@ -218,14 +220,12 @@ Colour RayTracer::TraceScene(Scene* pScene, Ray& ray, Colour incolour, int trace
 				Vector3 l = result.point + (l_normal * 0.0001);
 				ray.SetRay(l, l_normal);
 
-				m_isReflecting = true;
 				outcolour = TraceScene(pScene, ray, outcolour, --tracelevel, true);
 
 				lit_iter++;
 			}
 		}
 	}
-		
 	return outcolour;
 }
 
