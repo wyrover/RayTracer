@@ -23,6 +23,8 @@
 #include "Scene.h"
 #include "Camera.h"
 
+#define AIR_REFRACTIVE_INDEX 1.000293
+
 RayTracer::RayTracer()
 {
 	m_buffHeight = m_buffWidth = 0.0;
@@ -104,6 +106,7 @@ void RayTracer::DoRayTrace( Scene* pScene )
 				Ray viewray;
 				viewray.SetRay(camPosition,	(pixel - camPosition).Normalise());
 				
+				m_isRefracting = false;
 
 				//trace the scene using the view ray
 				//the default colour is the background colour, unless something is hit along the way
@@ -179,7 +182,22 @@ Colour RayTracer::TraceScene(Scene* pScene, Ray& ray, Colour incolour, int trace
 				//Combine the returned colour with the current surface colour
 
 				// DONE
-				ray.SetRay(result.point + (result.normal * -0.0001), ray.GetRay().Refract((result.normal), 1));
+
+				double refraction;
+
+				// Better refraction that using a constant
+				if (m_isRefracting)
+				{
+					refraction = ((Primitive*)result.data)->GetMaterial()->GetRefractiveIndex() / AIR_REFRACTIVE_INDEX;
+				}
+				else
+				{
+					refraction = AIR_REFRACTIVE_INDEX / ((Primitive*)result.data)->GetMaterial()->GetRefractiveIndex();
+				}
+
+				m_isRefracting = true;
+
+				ray.SetRay(result.point + (result.normal * -0.0001), ray.GetRay().Refract((result.normal), refraction));
 
 				outcolour += TraceScene(pScene, ray, outcolour, --tracelevel, shadowray) * 0.25f;
 			}

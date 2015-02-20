@@ -21,6 +21,8 @@ class RayTracer
 		int				m_renderCount;
 		int				m_traceLevel;
 
+		bool			m_isRefracting;
+
 		// My additional functions
 
 		Colour CalculateDiffuseLighting(Vector3 &lightNormal, Vector3 &surfaceNormal, Light &light, Material &material);

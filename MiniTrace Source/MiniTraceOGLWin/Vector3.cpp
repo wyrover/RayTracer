@@ -108,6 +108,7 @@ Vector3 Vector3::Reflect(const Vector3& n) const
 	//TODO: Calculate the reflection of this vector given the input normal n
 	//Store the result in result
 
+	// DONE
 	return n.CrossProduct(*this).CrossProduct(n) * 2.f - *this;
 }
 
@@ -119,7 +120,17 @@ Vector3 Vector3::Refract(const Vector3& n, double r_coeff) const
 	//Store the result in result
 	//Refraction is governed by the Snell's law
 
+	// DONE
+
+
 	double cosI = n.DotProduct(*this) * -1;
+
+	// if cosI is negative then the normal is pointing the wrong way
+	if (cosI < 0)
+	{
+		cosI *= -1;
+	}
+
 	double sinT2 = r_coeff * r_coeff * (1.0 - cosI * cosI);
 	double cosT = sqrt(1.0 - sinT2);
 

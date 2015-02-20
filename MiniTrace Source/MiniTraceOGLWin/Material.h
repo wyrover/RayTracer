@@ -17,6 +17,8 @@ struct Colour
 		red = green = blue = 0;
 	}
 
+	// My additional functions - for ease of adding/multiplying/scaling colours
+
 	const Colour operator+(const Colour &rhs) const
 	{
 		Colour result;
@@ -92,6 +94,8 @@ class Material
 		double m_specpower;
 		bool m_castShadow;
 
+		double m_refractiveIndex;
+
 	public:
 		
 		Material();
@@ -131,6 +135,18 @@ class Material
 		inline bool CastShadow()
 		{
 			return m_castShadow;
+		}
+
+		// My additional functions
+
+		inline void SetRefractiveIndex(double r)
+		{
+			m_refractiveIndex = r;
+		}
+
+		inline double GetRefractiveIndex()
+		{
+			return m_refractiveIndex;
 		}
 };
 

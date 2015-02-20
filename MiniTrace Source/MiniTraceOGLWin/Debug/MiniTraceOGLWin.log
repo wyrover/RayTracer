@@ -1,42 +1,21 @@
-﻿Build started 19/02/2015 20:08:26.
-     1>Project "D:\OneDrive\University\Year Two\Second Semester\Graphics 2\Assessment One\New\MiniTrace\MiniTraceOGLWin\MiniTraceOGLWin.vcxproj" on node 2 (Build target(s)).
+﻿Build started 20/02/2015 14:45:33.
+     1>Project "D:\GitHub\RayTracer\MiniTrace Source\MiniTraceOGLWin\MiniTraceOGLWin.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Light.cpp Material.cpp OGLApplication.cpp OGLWindow.cpp RayTracer.cpp Scene.cpp
-         Light.cpp
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\material.h(53): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\material.h(54): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\material.h(55): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\light.cpp(32): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\light.cpp(33): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\light.cpp(34): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-         Generating Code...
-         Compiling...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt RayTracer.cpp
          RayTracer.cpp
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\material.h(53): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\material.h(54): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\material.h(55): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\raytracer.cpp(28): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\raytracer.cpp(198): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\raytracer.cpp(199): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\raytracer.cpp(200): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\raytracer.cpp(245): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\raytracer.cpp(246): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\raytracer.cpp(247): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\raytracer.cpp(292): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\raytracer.cpp(293): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\raytracer.cpp(294): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\raytracer.cpp(305): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\raytracer.cpp(307): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\raytracer.cpp(308): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\onedrive\university\year two\second semester\graphics 2\assessment one\new\minitrace\minitraceoglwin\raytracer.cpp(309): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-         Generating Code...
-         Skipping... (no relevant changes detected)
-         Scene.cpp
-         OGLWindow.cpp
-         OGLApplication.cpp
-         Material.cpp
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(30): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(251): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(252): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(253): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(307): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(308): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(309): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(321): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(323): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(324): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(325): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\OneDrive\University\Year Two\Second Semester\Graphics 2\Assessment One\New\MiniTrace\Debug\MiniTraceOGLWin.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\OneDrive\University\Year Two\Second Semester\Graphics 2\Assessment One\New\MiniTrace\Debug\MiniTraceOGLWin.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\OneDrive\University\Year Two\Second Semester\Graphics 2\Assessment One\New\MiniTrace\Debug\MiniTraceOGLWin.lib" /MACHINE:X86 Debug\OGLWin32.res
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\GitHub\RayTracer\MiniTrace Source\Debug\MiniTraceOGLWin.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\GitHub\RayTracer\MiniTrace Source\Debug\MiniTraceOGLWin.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\GitHub\RayTracer\MiniTrace Source\Debug\MiniTraceOGLWin.lib" /MACHINE:X86 Debug\OGLWin32.res
          Debug\Box.obj
          Debug\Camera.obj
          Debug\Light.obj
@@ -51,9 +30,9 @@
          Debug\Sphere.obj
          Debug\Triangle.obj
          Debug\Vector3.obj
-         MiniTraceOGLWin.vcxproj -> D:\OneDrive\University\Year Two\Second Semester\Graphics 2\Assessment One\New\MiniTrace\Debug\MiniTraceOGLWin.exe
-     1>Done Building Project "D:\OneDrive\University\Year Two\Second Semester\Graphics 2\Assessment One\New\MiniTrace\MiniTraceOGLWin\MiniTraceOGLWin.vcxproj" (Build target(s)).
+         MiniTraceOGLWin.vcxproj -> D:\GitHub\RayTracer\MiniTrace Source\Debug\MiniTraceOGLWin.exe
+     1>Done Building Project "D:\GitHub\RayTracer\MiniTrace Source\MiniTraceOGLWin\MiniTraceOGLWin.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.47
+Time Elapsed 00:00:01.42

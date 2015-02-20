@@ -41,8 +41,6 @@ RayHitResult Plane::IntersectByRay(Ray& ray)
 	// 1. You should check if the ray is parallel to plane
 	// 2. Check if the ray intersects the plane from the front or the back
 
-	// I wish I understood why I needed to do this
-
 	if (m_normal.DotProduct(ray.GetRay()) < 0)
 		t = -((ray.GetRayStart().DotProduct(m_normal) + m_offset) / (ray.GetRay().DotProduct(m_normal)));
 	
