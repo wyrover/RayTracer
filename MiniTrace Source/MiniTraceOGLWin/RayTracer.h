@@ -22,6 +22,7 @@ class RayTracer
 		int				m_traceLevel;
 
 		bool			m_isRefracting;
+		bool			m_isReflecting;
 
 		// My additional functions
 

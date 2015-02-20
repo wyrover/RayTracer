@@ -80,6 +80,13 @@ struct Colour
 		blue *= scaler;
 	}
 
+	const void operator-=(const Colour &rhs)
+	{
+		red -= rhs.red;
+		green -= rhs.green;
+		blue -= rhs.blue;
+	}
+
 	float red;
 	float green;
 	float blue;
@@ -95,6 +102,7 @@ class Material
 		bool m_castShadow;
 
 		double m_refractiveIndex;
+		double m_transparency;
 
 	public:
 		
@@ -147,6 +155,16 @@ class Material
 		inline double GetRefractiveIndex()
 		{
 			return m_refractiveIndex;
+		}
+
+		inline void SetTransparency(double t)
+		{
+			m_transparency = t;
+		}
+
+		inline double GetTransparency()
+		{
+			return m_transparency;
 		}
 };
 

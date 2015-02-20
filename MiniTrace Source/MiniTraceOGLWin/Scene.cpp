@@ -36,6 +36,7 @@ void Scene::InitDefaultScene()
 	newmat->SetSpecularColour(1.0, 1.0, 1.0);
 	newmat->SetSpecPower(20);
 	newmat->SetRefractiveIndex(1.6);
+	newmat->SetTransparency(0);
 	newobj->SetMaterial(newmat);
 	m_sceneObjects.push_back(newobj);
 	m_objectMaterials.push_back(newmat);
@@ -48,6 +49,7 @@ void Scene::InitDefaultScene()
 	newmat->SetSpecularColour(1.0, 1.0, 1.0);
 	newmat->SetSpecPower(5);
 	newmat->SetRefractiveIndex(1.490);
+	newmat->SetTransparency(0.5);
 	newobj->SetMaterial(newmat);
 	m_sceneObjects.push_back(newobj);
 	m_objectMaterials.push_back(newmat);
@@ -60,6 +62,7 @@ void Scene::InitDefaultScene()
 	newmat->SetSpecularColour(1.0, 1.0, 1.0);
 	newmat->SetSpecPower(2);
 	newmat->SetRefractiveIndex(1.6);
+	newmat->SetTransparency(0.25);
 	newobj->SetMaterial(newmat);
 	m_sceneObjects.push_back(newobj);
 	m_objectMaterials.push_back(newmat);

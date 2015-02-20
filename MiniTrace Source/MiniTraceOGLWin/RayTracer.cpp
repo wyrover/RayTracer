@@ -106,7 +106,7 @@ void RayTracer::DoRayTrace( Scene* pScene )
 				Ray viewray;
 				viewray.SetRay(camPosition,	(pixel - camPosition).Normalise());
 				
-				m_isRefracting = false;
+				m_isReflecting = m_isRefracting = false;
 
 				//trace the scene using the view ray
 				//the default colour is the background colour, unless something is hit along the way
@@ -132,6 +132,7 @@ Colour RayTracer::TraceScene(Scene* pScene, Ray& ray, Colour incolour, int trace
 {
 	RayHitResult result;
 	Colour outcolour = incolour;
+
 	std::vector<Light*>* light_list = pScene->GetLightList();
 
 	if (tracelevel <= 0) // reach the MAX depth of the recursion.
@@ -183,23 +184,22 @@ Colour RayTracer::TraceScene(Scene* pScene, Ray& ray, Colour incolour, int trace
 
 				// DONE
 
-				double refraction;
+				double refractionIndex = 1;
 
 				// Better refraction that using a constant
 				if (m_isRefracting)
 				{
-					refraction = ((Primitive*)result.data)->GetMaterial()->GetRefractiveIndex() / AIR_REFRACTIVE_INDEX;
+					refractionIndex = ((Primitive*)result.data)->GetMaterial()->GetRefractiveIndex() / AIR_REFRACTIVE_INDEX;
 				}
 				else
 				{
-					refraction = AIR_REFRACTIVE_INDEX / ((Primitive*)result.data)->GetMaterial()->GetRefractiveIndex();
+					refractionIndex = AIR_REFRACTIVE_INDEX / ((Primitive*)result.data)->GetMaterial()->GetRefractiveIndex();
 				}
 
 				m_isRefracting = true;
+				ray.SetRay(result.point + (result.normal * -0.0001), ray.GetRay().Refract((result.normal), 1));
 
-				ray.SetRay(result.point + (result.normal * -0.0001), ray.GetRay().Refract((result.normal), refraction));
-
-				outcolour += TraceScene(pScene, ray, outcolour, --tracelevel, shadowray) * 0.25f;
+				outcolour += (TraceScene(pScene, ray, outcolour, --tracelevel, shadowray) * ((Primitive*)result.data)->GetMaterial()->GetTransparency());
 			}
 		}
 		
@@ -218,6 +218,7 @@ Colour RayTracer::TraceScene(Scene* pScene, Ray& ray, Colour incolour, int trace
 				Vector3 l = result.point + (l_normal * 0.0001);
 				ray.SetRay(l, l_normal);
 
+				m_isReflecting = true;
 				outcolour = TraceScene(pScene, ray, outcolour, --tracelevel, true);
 
 				lit_iter++;
