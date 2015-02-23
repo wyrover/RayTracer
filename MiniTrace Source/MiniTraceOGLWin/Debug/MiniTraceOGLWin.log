@@ -1,19 +1,30 @@
-﻿Build started 20/02/2015 15:09:30.
+﻿Build started 23/02/2015 20:14:42.
      1>Project "D:\GitHub\RayTracer\MiniTrace Source\MiniTraceOGLWin\MiniTraceOGLWin.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt RayTracer.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Light.cpp Material.cpp OGLApplication.cpp OGLWindow.cpp RayTracer.cpp Scene.cpp
+         Scene.cpp
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\scene.cpp(48): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\scene.cpp(61): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\scene.cpp(130): warning C4305: '=' : truncation from 'double' to 'float'
          RayTracer.cpp
      1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(30): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(253): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
-     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(254): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
-     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(255): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
-     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(309): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(310): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(311): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(323): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(325): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(326): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(327): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(204): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(248): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(249): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(250): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(304): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(305): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(306): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(318): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(320): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(321): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\github\raytracer\minitrace source\minitraceoglwin\raytracer.cpp(322): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         OGLWindow.cpp
+         OGLApplication.cpp
+         Material.cpp
+         Light.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\GitHub\RayTracer\MiniTrace Source\Debug\MiniTraceOGLWin.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\GitHub\RayTracer\MiniTrace Source\Debug\MiniTraceOGLWin.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\GitHub\RayTracer\MiniTrace Source\Debug\MiniTraceOGLWin.lib" /MACHINE:X86 Debug\OGLWin32.res
          Debug\Box.obj
@@ -35,4 +46,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.37
+Time Elapsed 00:00:02.57
