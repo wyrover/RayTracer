@@ -298,10 +298,15 @@ Colour RayTracer::CalculateLighting(std::vector<Light*>* lights, Vector3* campos
 			outcolour += CalculateDiffuseLighting((light_pos - surface_point).Normalise(), normal, **lit_iter, *mat);
 			outcolour += CalculateSpecularLighting(surface_point, normal, light_pos - surface_point, *campos, **lit_iter, *mat);
 
+			double dist = (light_pos - surface_point).Norm();
+			double att = 1.0 / (1.0 + (0 * dist) + (0.002 * dist * dist));
+
+			outcolour *= att;
+
 			lit_iter++;
 		}
 	}
-
+	// light and surface pont
 	return outcolour;
 }
 
