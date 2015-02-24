@@ -89,28 +89,42 @@ void RayTracer::DoRayTrace( Scene* pScene )
 				//calculate the metric size of a pixel in the view plane (e.g. framebuffer)
 				Vector3 pixel;
 
-				pixel[0] = start[0] + (i + 0.5) * camUpVector[0] * pixelDY
-					+ (j + 0.5) * camRightVector[0] * pixelDX;
-				pixel[1] = start[1] + (i + 0.5) * camUpVector[1] * pixelDY
-					+ (j + 0.5) * camRightVector[1] * pixelDX;
-				pixel[2] = start[2] + (i + 0.5) * camUpVector[2] * pixelDY
-					+ (j + 0.5) * camRightVector[2] * pixelDX;
+				Colour colour;
 
-				/*
-				* setup view ray
-				* In perspective projection, each view ray originates from the eye (camera) position 
-				* and pierces through a pixel in the view plane
-				*
-				* TODO: For a little extra credit, set up the view rays to produce orthographic projection
-				*/
-				Ray viewray;
-				viewray.SetRay(camPosition,	(pixel - camPosition).Normalise());
-				
-				m_isReflecting = m_isRefracting = false;
+				// Anti-Aliasing WOOHOO
+				for (float x = 0; x <= 1.f; x += 0.25f)
+				{
+					for (float y = 0; y <= 1.f; y += 0.25f)
+					{
+						pixel[0] = start[0] + (i + x) * camUpVector[0] * pixelDY
+							+ (j + y) * camRightVector[0] * pixelDX;
+						pixel[1] = start[1] + (i + x) * camUpVector[1] * pixelDY
+							+ (j + y) * camRightVector[1] * pixelDX;
+						pixel[2] = start[2] + (i + x) * camUpVector[2] * pixelDY
+							+ (j + y) * camRightVector[2] * pixelDX;
 
-				//trace the scene using the view ray
-				//the default colour is the background colour, unless something is hit along the way
-				Colour colour = this->TraceScene(pScene, viewray, scenebg, m_traceLevel);
+						/*
+						* setup view ray
+						* In perspective projection, each view ray originates from the eye (camera) position
+						* and pierces through a pixel in the view plane
+						*
+						* TODO: For a little extra credit, set up the view rays to produce orthographic projection
+						*/
+
+						Ray viewray;
+						viewray.SetRay(camPosition, (pixel - camPosition).Normalise());
+
+						m_isReflecting = m_isRefracting = false;
+
+						//trace the scene using the view ray
+						//the default colour is the background colour, unless something is hit along the way
+						colour+= this->TraceScene(pScene, viewray, scenebg, m_traceLevel);
+					}
+				}
+
+				colour.red /= 25.f;
+				colour.green /= 25.f;
+				colour.blue /= 25.f;
 
 				/*
 				* The only OpenGL code we need

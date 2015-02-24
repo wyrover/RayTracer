@@ -1,22 +1,22 @@
-﻿Build started 20/02/2015 17:14:17.
-     1>Project "D:\GitHub\RayTracer\MiniTrace Source\MiniTraceOGLWin\MiniTraceOGLWin.vcxproj" on node 2 (Build target(s)).
+﻿Build started 24/02/2015 15:01:39.
+     1>Project "\\ctstudent2\studentusers\100271404\Documents\GitHub\RayTracer\MiniTrace Source\MiniTraceOGLWin\MiniTraceOGLWin.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt RayTracer.cpp
          RayTracer.cpp
      1>RayTracer.cpp(30): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>RayTracer.cpp(204): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
-     1>RayTracer.cpp(248): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
-     1>RayTracer.cpp(249): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
-     1>RayTracer.cpp(250): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
-     1>RayTracer.cpp(304): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>RayTracer.cpp(305): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>RayTracer.cpp(306): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>RayTracer.cpp(318): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>RayTracer.cpp(320): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>RayTracer.cpp(321): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>RayTracer.cpp(322): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>RayTracer.cpp(216): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+     1>RayTracer.cpp(260): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>RayTracer.cpp(261): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>RayTracer.cpp(262): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>RayTracer.cpp(316): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>RayTracer.cpp(317): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>RayTracer.cpp(318): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>RayTracer.cpp(330): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>RayTracer.cpp(332): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>RayTracer.cpp(333): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>RayTracer.cpp(334): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\GitHub\RayTracer\MiniTrace Source\Release\MiniTraceOGLWin.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\GitHub\RayTracer\MiniTrace Source\Release\MiniTraceOGLWin.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\GitHub\RayTracer\MiniTrace Source\Release\MiniTraceOGLWin.lib" /MACHINE:X86 /SAFESEH Release\OGLWin32.res
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"\\ctstudent2\studentusers\100271404\Documents\GitHub\RayTracer\MiniTrace Source\Release\MiniTraceOGLWin.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"\\ctstudent2\studentusers\100271404\Documents\GitHub\RayTracer\MiniTrace Source\Release\MiniTraceOGLWin.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"\\ctstudent2\studentusers\100271404\Documents\GitHub\RayTracer\MiniTrace Source\Release\MiniTraceOGLWin.lib" /MACHINE:X86 /SAFESEH Release\OGLWin32.res
          Release\Box.obj
          Release\Camera.obj
          Release\Light.obj
@@ -33,9 +33,9 @@
          Release\Vector3.obj
          Generating code
          Finished generating code
-         MiniTraceOGLWin.vcxproj -> D:\GitHub\RayTracer\MiniTrace Source\Release\MiniTraceOGLWin.exe
-     1>Done Building Project "D:\GitHub\RayTracer\MiniTrace Source\MiniTraceOGLWin\MiniTraceOGLWin.vcxproj" (Build target(s)).
+         MiniTraceOGLWin.vcxproj -> \\ctstudent2\studentusers\100271404\Documents\GitHub\RayTracer\MiniTrace Source\Release\MiniTraceOGLWin.exe
+     1>Done Building Project "\\ctstudent2\studentusers\100271404\Documents\GitHub\RayTracer\MiniTrace Source\MiniTraceOGLWin\MiniTraceOGLWin.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.95
+Time Elapsed 00:00:02.65
