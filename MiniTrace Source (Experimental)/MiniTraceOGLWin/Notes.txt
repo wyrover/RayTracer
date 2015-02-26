@@ -1,0 +1,5 @@
+## Refraction indices ##
+
+Air = 1.000293
+Crown glass = 1.490
+Flint glass = 1.60
