@@ -11,6 +11,7 @@
 #include "Sphere.h"
 #include "Plane.h"
 #include "Box.h"
+#include "Mesh.h"
 
 Scene::Scene()
 {
@@ -28,7 +29,7 @@ void Scene::InitDefaultScene()
 	//the default scene consists of 3 spheres and a plane as the ground
 	
 	//Create a box and its material
-	Primitive* newobj = new Box(Vector3(-2.0, 4.0, -8.0), 3.0, 10.0, 4.0);
+	Primitive* newobj = new Box(Vector3(-3.0, 4.0, -10.0), 3.0, 10.0, 4.0);
 	Material* newmat = new Material();
 	//mat for the box
 	newmat->SetAmbientColour(0.0, 0.0, 0.0);
@@ -40,9 +41,22 @@ void Scene::InitDefaultScene()
 	newobj->SetMaterial(newmat);
 	m_sceneObjects.push_back(newobj);
 	m_objectMaterials.push_back(newmat);
+
+	// My mesh
+	newobj = new Mesh(L"house.obj", Vector3(6.0, 0.5, -16.0), Vector3(0.0, 2.0, 0.0), 11.0, 7.0, 6.0);
+	newmat = new Material();
+	newmat->SetAmbientColour(0.0, 0.0, 0.0);
+	newmat->SetDiffuseColour(0.2f, 0.2f, 0.8f);
+	newmat->SetSpecularColour(1.0, 1.0, 1.0);
+	newmat->SetSpecPower(2);
+	newmat->SetRefractiveIndex(1.6);
+	newmat->SetTransparency(0.25);
+	newobj->SetMaterial(newmat);
+	m_sceneObjects.push_back(newobj);
+	m_objectMaterials.push_back(newmat);
 	
 	//Create sphere 1 and its material
-	newobj = new Sphere(3.0, 5, -3.5, 2.0); //sphere 2
+	newobj = new Sphere(3, 8, -4.0, 2.0);
 	newmat = new Material();
 	newmat->SetAmbientColour(0.0, 0.0, 0.0);
 	newmat->SetDiffuseColour(0.0, 0.8, 0.0);
@@ -55,7 +69,7 @@ void Scene::InitDefaultScene()
 	m_objectMaterials.push_back(newmat);
 	
 	//Create sphere 2 and its material
-	newobj = new Sphere(-2.0, 5, 3.5, 2.0); //sphere 3
+	newobj = new Sphere(-3.0, 5, 3.5, 2.0);
 	newmat = new Material();
 	newmat->SetAmbientColour(0.0, 0.0, 0.0);
 	newmat->SetDiffuseColour(0.0, 0.0, 0.9);
@@ -135,7 +149,12 @@ void Scene::InitDefaultScene()
 	m_sceneHeight = 1.0;
 
 	//default camera position and look at
+
+	// PERSPECTIVE
 	m_activeCamera.SetPositionAndLookAt(Vector3(3.0, 7.0, 13.0), Vector3(0.0, 7.0, 0.0));
+
+	// ORTHOGRAPHIC
+	//m_activeCamera.SetPositionAndLookAt(Vector3(3.0, 7.0, 13.0), Vector3(-7.0, -2.0, 0.0));
 }
 
 void Scene::CleanupScene()

@@ -23,8 +23,9 @@ public:
 	Triangle();
 	Triangle(Vector3 pos1, Vector3 pos2, Vector3 pos3);
 	~Triangle();
-	
+
 	void SetTriangle(Vector3 v0, Vector3 v1, Vector3 v2);
+	void SetPosition(Vector3 &v);
 
 	RayHitResult IntersectByRay(Ray& ray);
 };

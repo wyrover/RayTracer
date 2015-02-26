@@ -24,7 +24,8 @@ class Primitive
 			PRIMTYPE_Plane = 0,
 			PRIMTYPE_Sphere,
 			PRIMTYPE_Triangle,
-			PRIMTYPE_Box
+			PRIMTYPE_Box,
+			PRIMTYPE_Mesh
 		};
 
 		PRIMTYPE				m_primtype;

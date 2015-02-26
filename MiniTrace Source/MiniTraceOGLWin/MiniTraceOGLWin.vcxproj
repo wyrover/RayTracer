@@ -82,7 +82,9 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Light.h" />
     <ClInclude Include="Material.h" />
+    <ClInclude Include="Mesh.h" />
     <ClInclude Include="MiniTraceOGLWinMain.h" />
+    <ClInclude Include="OBJFileReader.h" />
     <ClInclude Include="OGLApplication.h" />
     <ClInclude Include="OGLWindow.h" />
     <ClInclude Include="Plane.h" />
@@ -101,7 +103,9 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Light.cpp" />
     <ClCompile Include="Material.cpp" />
+    <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="MiniTraceOGLWinMain.cpp" />
+    <ClCompile Include="OBJFileReader.cpp" />
     <ClCompile Include="OGLApplication.cpp" />
     <ClCompile Include="OGLWindow.cpp" />
     <ClCompile Include="Plane.cpp" />

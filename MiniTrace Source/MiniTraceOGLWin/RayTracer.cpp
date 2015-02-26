@@ -60,6 +60,11 @@ void RayTracer::DoRayTrace( Scene* pScene )
 	double sceneWidth = pScene->GetSceneWidth();
 	double sceneHeight = pScene->GetSceneHeight();
 
+	// Orthographic
+	//double pixelDX = (sceneWidth / m_buffWidth) * 15;
+	//double pixelDY = (sceneHeight / m_buffHeight) * 15;
+
+	// Perspective - uncomment code in scene too
 	double pixelDX = sceneWidth / m_buffWidth;
 	double pixelDY = sceneHeight / m_buffHeight;
 	
@@ -91,10 +96,10 @@ void RayTracer::DoRayTrace( Scene* pScene )
 
 				Colour colour;
 
-				// Anti-Aliasing WOOHOO
-				for (float x = 0; x <= 1.f; x += 0.25f)
+				// Anti-Aliasing WOOHOO - 16 total samples per pixel
+				for (float x = 0.25f; x <= 1.f; x += 0.25f)
 				{
-					for (float y = 0; y <= 1.f; y += 0.25f)
+					for (float y = 0.25; y <= 1.f; y += 0.25f)
 					{
 						pixel[0] = start[0] + (i + x) * camUpVector[0] * pixelDY
 							+ (j + y) * camRightVector[0] * pixelDX;
@@ -117,9 +122,8 @@ void RayTracer::DoRayTrace( Scene* pScene )
 						viewray.SetRay(camPosition, (pixel - camPosition).Normalise());
 
 
-						// ORTHOGRAPHIC
-						//Vector3 start = Vector3(0.25 * (j - m_buffWidth / 2.0) + 0.5, 0.25 * (i - m_buffHeight / 2.0) + 0.5, 100);
-						//viewray.SetRay(start, Vector3(0, 0, -1).Normalise());
+						// Orthographic attempt
+						//viewray.SetRay(pixel, camViewVector.Normalise());
 
 						m_isReflecting = m_isRefracting = false;
 
@@ -129,9 +133,9 @@ void RayTracer::DoRayTrace( Scene* pScene )
 					}
 				}
 
-				colour.red /= 25.f;
-				colour.green /= 25.f;
-				colour.blue /= 25.f;
+				colour.red /= 16.f;
+				colour.green /= 16.f;
+				colour.blue /= 16.f;
 
 				/*
 				* The only OpenGL code we need
@@ -262,6 +266,7 @@ Colour RayTracer::CalculateLighting(std::vector<Light*>* lights, Vector3* campos
 	//the default output colour is the ambient colour
 	outcolour = mat->GetAmbientColour();
 	
+	// The hack fucks stuff up.
 	//This is a hack to set a checker pattern on the planes
 	//Do not modify it
 	if (((Primitive*)hitresult->data)->m_primtype == Primitive::PRIMTYPE_Plane)

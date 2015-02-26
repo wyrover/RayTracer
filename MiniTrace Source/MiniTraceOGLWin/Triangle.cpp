@@ -2,7 +2,7 @@
 *
 * Copyright © 2015  Minsi Chen
 * E-mail: m.chen@derby.ac.uk
-* 
+*
 * The source is written for the Graphics I and II modules. You are free
 * to use and extend the functionality. The code provided here is functional
 * however the author does not guarantee its performance.
@@ -44,13 +44,19 @@ void Triangle::SetTriangle(Vector3 v0, Vector3 v1, Vector3 v2)
 	m_normal = Norm;
 }
 
+void Triangle::SetPosition(Vector3 &pos)
+{
+	m_vertices[0] = m_vertices[0] + pos;
+	m_vertices[1] = m_vertices[1] + pos;
+	m_vertices[2] = m_vertices[2] + pos;
+}
 
 RayHitResult Triangle::IntersectByRay(Ray& ray)
 {
 	RayHitResult result = Ray::s_defaultHitResult;
 	double t = FARFAR_AWAY;
 	Vector3 intersection_point;
-	
+
 	// TODO: Calculate the intersection between in the input ray and this triangle
 	// If you have implemented ray-plane intersection, you have done half the work for ray-triangle intersection.
 	// The remaining test is to check if the intersection point is inside the triangle
@@ -64,8 +70,6 @@ RayHitResult Triangle::IntersectByRay(Ray& ray)
 
 		//Calculate the exact location of the intersection using the result of t
 		intersection_point = ray.GetRayStart() + ray.GetRay()*temp;
-
-		// http://www.blackpawn.com/texts/pointinpoly/
 
 		Vector3 v0 = m_vertices[2] - m_vertices[0];
 		Vector3 v1 = m_vertices[1] - m_vertices[0];
@@ -86,7 +90,7 @@ RayHitResult Triangle::IntersectByRay(Ray& ray)
 			t = temp;
 	}
 
-	if (t > 0 && t < FARFAR_AWAY) 
+	if (t > 0 && t < FARFAR_AWAY)
 	{	//ray intersection
 		result.t = t;
 		result.normal = this->m_normal;
@@ -94,6 +98,6 @@ RayHitResult Triangle::IntersectByRay(Ray& ray)
 		result.data = this;
 		return result;
 	}
-	
+
 	return result;
 }

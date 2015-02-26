@@ -1,49 +1,29 @@
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\minitraceoglwin\debug\vc120.pdb
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\minitraceoglwin\debug\vc120.idb
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\minitraceoglwin\debug\box.obj
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\minitraceoglwin\debug\camera.obj
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\minitraceoglwin\debug\light.obj
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\minitraceoglwin\debug\material.obj
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\minitraceoglwin\debug\minitraceoglwinmain.obj
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\minitraceoglwin\debug\oglapplication.obj
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\minitraceoglwin\debug\oglwindow.obj
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\minitraceoglwin\debug\plane.obj
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\minitraceoglwin\debug\ray.obj
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\minitraceoglwin\debug\raytracer.obj
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\minitraceoglwin\debug\scene.obj
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\minitraceoglwin\debug\sphere.obj
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\minitraceoglwin\debug\triangle.obj
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\minitraceoglwin\debug\vector3.obj
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\debug\minitraceoglwin.ilk
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\debug\minitraceoglwin.exe
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\debug\minitraceoglwin.pdb
-d:\onedrive\university\year two\second semester\graphics 2\assessment one\minitrace\minitraceoglwin\debug\oglwin32.res
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\box.obj
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\camera.obj
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\light.obj
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\material.obj
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\minitraceoglwinmain.obj
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\oglapplication.obj
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\oglwindow.obj
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\plane.obj
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\ray.obj
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\raytracer.obj
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\scene.obj
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\sphere.obj
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\triangle.obj
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\vector3.obj
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\oglwin32.res
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\vc120.idb
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\vc120.pdb
-\\ctstudent2\studentusers\100271404\downloads\minitrace\debug\minitraceoglwin.pdb
-\\ctstudent2\studentusers\100271404\downloads\minitrace\debug\minitraceoglwin.exe
-\\ctstudent2\studentusers\100271404\downloads\minitrace\debug\minitraceoglwin.ilk
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\minitraceoglwin.tlog\cl.command.1.tlog
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\minitraceoglwin.tlog\cl.read.1.tlog
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\minitraceoglwin.tlog\cl.write.1.tlog
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\minitraceoglwin.tlog\link.command.1.tlog
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\minitraceoglwin.tlog\link.read.1.tlog
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\minitraceoglwin.tlog\link.write.1.tlog
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\minitraceoglwin.tlog\rc.command.1.tlog
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\minitraceoglwin.tlog\rc.read.1.tlog
-\\ctstudent2\studentusers\100271404\downloads\minitrace\minitraceoglwin\debug\minitraceoglwin.tlog\rc.write.1.tlog
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\vc120.pdb
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\vc120.idb
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\box.obj
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\camera.obj
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\light.obj
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\material.obj
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\minitraceoglwinmain.obj
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\oglapplication.obj
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\oglwindow.obj
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\plane.obj
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\ray.obj
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\raytracer.obj
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\scene.obj
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\sphere.obj
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\triangle.obj
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\vector3.obj
+d:\github\raytracer\minitrace source\debug\minitraceoglwin.ilk
+d:\github\raytracer\minitrace source\debug\minitraceoglwin.exe
+d:\github\raytracer\minitrace source\debug\minitraceoglwin.pdb
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\oglwin32.res
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\minitraceoglwin.tlog\cl.command.1.tlog
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\minitraceoglwin.tlog\cl.read.1.tlog
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\minitraceoglwin.tlog\cl.write.1.tlog
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\minitraceoglwin.tlog\link.command.1.tlog
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\minitraceoglwin.tlog\link.read.1.tlog
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\minitraceoglwin.tlog\link.write.1.tlog
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\minitraceoglwin.tlog\rc.command.1.tlog
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\minitraceoglwin.tlog\rc.read.1.tlog
+d:\github\raytracer\minitrace source\minitraceoglwin\debug\minitraceoglwin.tlog\rc.write.1.tlog
