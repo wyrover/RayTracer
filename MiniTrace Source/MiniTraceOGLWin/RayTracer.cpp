@@ -111,8 +111,15 @@ void RayTracer::DoRayTrace( Scene* pScene )
 						* TODO: For a little extra credit, set up the view rays to produce orthographic projection
 						*/
 
+
+						// PERSPECTIVE
 						Ray viewray;
 						viewray.SetRay(camPosition, (pixel - camPosition).Normalise());
+
+
+						// ORTHOGRAPHIC
+						//Vector3 start = Vector3(0.25 * (j - m_buffWidth / 2.0) + 0.5, 0.25 * (i - m_buffHeight / 2.0) + 0.5, 100);
+						//viewray.SetRay(start, Vector3(0, 0, -1).Normalise());
 
 						m_isReflecting = m_isRefracting = false;
 
